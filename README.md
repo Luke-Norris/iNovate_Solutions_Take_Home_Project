@@ -13,9 +13,9 @@ This project is currently in development. Users can filter tweets by username an
 
 ## Project Screen Shot(s)
 
-[ SCREEN SHOT HERE ]
+![0d600effa76fbbc8010b54889ff94197](https://user-images.githubusercontent.com/53554168/228449903-40e7237f-8699-4071-87f1-81db7d69301b.png)
+![25c23dd67d8772e2aa80e10eec671301](https://user-images.githubusercontent.com/53554168/228449954-f010aaf5-5814-4422-90a6-e33276c13ecf.png)
 
-[ SCREEN SHOT HERE ]
 
 ## Installation and Setup Instructions
 
