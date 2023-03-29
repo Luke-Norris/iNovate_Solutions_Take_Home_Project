@@ -21,46 +21,57 @@ const Fizzbonacci = () => {
   const [integerCheck, setIntegerCheck] = useState();
 
   const handleChange1 = (event) => {
-    setFizz(event.target.value);
+    const { value } = event.target;
+    setFizz(value);
+    setFizzbonacciListReady()
+
   };
 
   const handleChange2 = (event) => {
     const { value } = event.target;
     setDivisor1(value);
     setIntegerCheck(validateInput(value));
-    setFizzbonacciArray([])
+    setFizzbonacciListReady()
+
   };
 
   const handleChange3 = (event) => {
     const { value } = event.target;
     setX(value);
     setIntegerCheck(validateInput(value));
-    setFizzbonacciArray([])
+    setFizzbonacciListReady()
+
   };
 
   const handleChange4 = (event) => {
-    setBuzz(event.target.value);
+    const { value } = event.target;
+    setBuzz(value);
+    setFizzbonacciListReady()
+
   };
 
   const handleChange5 = (event) => {
     const { value } = event.target;
     setDivisor2(value);
     setIntegerCheck(validateInput(value));
-    setFizzbonacciArray([])
+    setFizzbonacciListReady()
+
   };
 
   const handleChange6 = (event) => {
     const { value } = event.target;
     setZ(value);
     setIntegerCheck(validateInput(value));
-    setFizzbonacciArray([])
+    setFizzbonacciListReady()
+
   };
 
   const handleChange7 = (event) => {
     const { value } = event.target;
     setInput(value);
     setIntegerCheck(validateInput(value));
-    setFizzbonacciArray([])
+    setFizzbonacciListReady()
+
   };
 
 
@@ -70,6 +81,7 @@ const Fizzbonacci = () => {
       return
     }
 
+    // fibonacci portion
     fizzbonacciArray[0] = 0;
     fizzbonacciArray[1] = 1;
     setIntegerCheck(0)
@@ -83,6 +95,7 @@ const Fizzbonacci = () => {
     }
     fizzbonacciArray.shift(); // getting rid of the first 0 (as wanted in project pdf)
 
+    // fizzbuzz portion
     for (let i = 0; i < fizzbonacciArray.length; i++) {
       if (fizzbonacciArray[i] % divisor1 == 0 && fizzbonacciArray[i] % divisor2 == 0) {
         fizzbonacciArray[i] = fizz.concat(buzz);
@@ -136,7 +149,6 @@ const Fizzbonacci = () => {
       <RunButton runProgramMsg={"Run Fizzbonacci"} runProgram={runFizzbonacci} />
       {integerCheck && <InputAlert />}
       {fizzbonacciListReady && <NumList items={fizzbonacciArray} />}
-      {fizzbonacciArray && 1}
       <img src={logo} className="logo" alt="logo" />
     </div>
   );

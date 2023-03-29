@@ -22,26 +22,31 @@ const FizzBuzz = () => {
         const { value } = event.target;
         setInput(value);
         setIntegerCheck(validateInput(value));
+        setFizzListReady()
       };
     
     const handleChange2 = (event) => {
         const { value } = event.target;
         setDivisor1(value);
         setIntegerCheck(validateInput(value));
+        setFizzListReady()
       };
     
     const handleChange3 = (event) => {
         const { value } = event.target;
         setDivisor2(value);
         setIntegerCheck(validateInput(value));
+        setFizzListReady()
       };
      
     const handleChange4 = (event) => {
         setFizz(event.target.value);
+        setFizzListReady()
       };
     
     const handleChange5 = (event) => {
         setBuzz(event.target.value);
+        setFizzListReady()
       };
 
 
